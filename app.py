@@ -14,6 +14,7 @@ mtcnn = MTCNN()
 
 def preprocess_image(image_data):
     image = Image.open(io.BytesIO(image_data))
+    image = image.resize((512, 512))
     image_cropped = mtcnn(image)
     return image_cropped
 
