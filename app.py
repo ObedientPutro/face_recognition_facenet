@@ -75,9 +75,9 @@ if not hasattr(st, 'already_started_server'):
         except Exception as e:
             return jsonify({"error": str(e)}), 400
 
-    if __name__ == '__main__':
-        app.run(debug=True)
-    # app.run(port=8888)
+    # if __name__ == '__main__':
+    #     app.run(debug=True)
+    app.run(port=8888)
 
 
 # We'll never reach this part of the code the first time this file executes!
